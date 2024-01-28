@@ -35,7 +35,6 @@ There's a how to use exampel at directus-extension-testing-bundle bundle
 
 # Code examples:
 
-````
 ```typescript
 const ApiLayerExample = new DirectusAPILayer({
     accountability: context.accountability,
@@ -123,7 +122,6 @@ const requestResponse = await ApiLayerExample.directusHandlerAPI('AcademyTutoria
     }
 },'allRelationsNonString')
 ```
-````
 
 
 # Suggestions
