@@ -1,5 +1,5 @@
 # DIRECTUS MODEL GENERATOR TYPES
-This extension lets you create a new file with you proyect databse structure.
+This extension lets you create a new file with you proyect database structure.
 It tries to manage request in a simple way, just like an ORM would do, it is inspired in how prisma works
 
 # Usage
@@ -16,12 +16,12 @@ Then the extension will build the entire database schema, ready to be used with 
 # Important points
 - The configurations are made to be used with "DirectusAPILayer" class, it has all the methods and TS configurations
 to let the system understand how to handle the database schema
-- Sometimes in some propieties like directu's 'group' might appear some relational fields as options, I will check how
+- Sometimes in some propieties like directus' 'group' might appear some relational fields as options, I will check how
 to let TS undertand that it has to ignore all those fields
 
 # How it works
 You have to create a 'DirectusAPILayer' class instance, the use `ApiLayerExample.directusHandlerAPI` method,
-it will suggest you wich table you want to request or manipulate information.
+it will suggest you which table you want to request or manipulate information.
 
 *I have tried only with services that comes from extensions, if you want to use it with the sdk, try adding some configurations to
 'DirectusAPILayer' class*
