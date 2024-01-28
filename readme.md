@@ -39,7 +39,6 @@ There's a how to use exampel at directus-extension-testing-bundle bundle
 const ApiLayerExample = new DirectusAPILayer({
     accountability: context.accountability,
     schema: await getSchema(),
-    "collection": 'UserVehicleAndBusinessTask',
     "directusBackendServices": services,
     "directusEmitter": emitter,
     "knexInstance": database,
