@@ -1,0 +1,43 @@
+{
+	"name": "directus-extension-db-operations",
+	"description": "Please enter a description for your extension",
+	"icon": "extension",
+	"version": "1.0.0",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-custom-bundle"
+	],
+	"type": "module",
+	"directus:extension": {
+		"type": "bundle",
+		"path": {
+			"app": "dist/app.js",
+			"api": "dist/api.js"
+		},
+		"entries": [
+			{
+				"type": "hook",
+				"name": "ts-schema-generator",
+				"source": "src/ts-schema-generator/index.ts"
+			}
+		],
+		"host": "^10.3.0"
+	},
+	"scripts": {
+		"prepack": "directus-extension build --sourcemap",
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link",
+		"add": "directus-extension add"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "10.3.0",
+		"@types/node": "^20.11.8",
+		"pluralize": "^8.0.0",
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"directus": "^10.8.3"
+	}
+}

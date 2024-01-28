@@ -1,0 +1,46 @@
+{
+	"name": "directus-extension-testing-bundle",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "Please enter a description for your extension",
+	"icon": "extension",
+	"dependencies": {
+		"directus": "^10.8.2"
+	},
+	"directus:extension": {
+		"host": "^10.2.0",
+		"type": "bundle",
+		"path": {
+			"app": "dist/app.js",
+			"api": "dist/api.js"
+		},
+		"entries": [
+			{
+				"type": "endpoint",
+				"name": "testing-invocation",
+				"source": "src/testing-invocation/index.ts"
+			},
+			{
+				"type": "hook",
+				"name": "on-read",
+				"source": "src/on-read/index.ts"
+			}
+		]
+	},
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-custom-bundle"
+	],
+	"scripts": {
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link",
+		"add": "directus-extension add"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "10.2.0",
+		"@types/node": "^20.11.6",
+		"typescript": "^5.3.3"
+	}
+}
